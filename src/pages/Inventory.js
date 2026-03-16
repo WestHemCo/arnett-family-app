@@ -68,7 +68,7 @@ export default function Inventory({ session }) {
 
   return (
     <div style={s.page}>
-      {showAdd && <AddItem onSave={handleSaved} onCancel={() => setShowAdd(false)} />}
+      {showAdd && <AddItem onSave={handleSaved} onCancel={() => setShowAdd(false)} defaultLocation={activeTab} />}
 
       <div style={s.pageHeader}>
         <div>
