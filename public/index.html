@@ -9,14 +9,13 @@
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
-    <!-- Barcode detector polyfill — loads WASM from CDN, bypasses webpack -->
     <script src="https://cdn.jsdelivr.net/npm/@undecaf/zbar-wasm@0.9.15/dist/index.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@undecaf/barcode-detector-polyfill@0.9.23/dist/index.js"></script>
     <script>
       try {
-        window['BarcodeDetector'].getSupportedFormats()
-      } catch {
-        window['BarcodeDetector'] = barcodeDetectorPolyfill.BarcodeDetectorPolyfill
+        window["BarcodeDetector"].getSupportedFormats()
+      } catch(e) {
+        window["BarcodeDetector"] = barcodeDetectorPolyfill.BarcodeDetectorPolyfill
       }
     </script>
   </body>
